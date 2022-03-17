@@ -9459,11 +9459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Muhammad Musab\\Desktop\\DataAnnotationLab\\DataAnnotationLab\\DataAnnotationLab.csproj",
+      "projectUniqueName": "C:\\Users\\Muhammad Musab\\Desktop\\SD-340-Labs\\Lab1\\DataAnnotationLab\\DataAnnotationLab\\DataAnnotationLab.csproj",
       "projectName": "DataAnnotationLab",
-      "projectPath": "C:\\Users\\Muhammad Musab\\Desktop\\DataAnnotationLab\\DataAnnotationLab\\DataAnnotationLab.csproj",
+      "projectPath": "C:\\Users\\Muhammad Musab\\Desktop\\SD-340-Labs\\Lab1\\DataAnnotationLab\\DataAnnotationLab\\DataAnnotationLab.csproj",
       "packagesPath": "C:\\Users\\Muhammad Musab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Muhammad Musab\\Desktop\\DataAnnotationLab\\DataAnnotationLab\\obj\\",
+      "outputPath": "C:\\Users\\Muhammad Musab\\Desktop\\SD-340-Labs\\Lab1\\DataAnnotationLab\\DataAnnotationLab\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Muhammad Musab\\AppData\\Roaming\\NuGet\\NuGet.Config",

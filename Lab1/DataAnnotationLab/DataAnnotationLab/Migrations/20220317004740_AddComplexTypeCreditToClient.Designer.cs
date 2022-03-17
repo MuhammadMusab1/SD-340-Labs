@@ -4,6 +4,7 @@ using DataAnnotationLab.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAnnotationLab.Migrations
 {
     [DbContext(typeof(DataAnnotationLabContext))]
-    partial class DataAnnotationLabContextModelSnapshot : ModelSnapshot
+    [Migration("20220317004740_AddComplexTypeCreditToClient")]
+    partial class AddComplexTypeCreditToClient
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +48,7 @@ namespace DataAnnotationLab.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Client", (string)null);
+                    b.ToTable("Client");
                 });
 
             modelBuilder.Entity("DataAnnotationLab.Models.Room", b =>
@@ -65,12 +67,12 @@ namespace DataAnnotationLab.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Room", (string)null);
+                    b.ToTable("Room");
                 });
 
             modelBuilder.Entity("DataAnnotationLab.Models.Client", b =>
                 {
-                    b.OwnsOne("DataAnnotationLab.Models.Client.Credit#DataAnnotationLab.Models.Credit", "Credit", b1 =>
+                    b.OwnsOne("DataAnnotationLab.Models.Credit", "Credit", b1 =>
                         {
                             b1.Property<int>("ClientId")
                                 .HasColumnType("int");
@@ -88,7 +90,7 @@ namespace DataAnnotationLab.Migrations
 
                             b1.HasKey("ClientId");
 
-                            b1.ToTable("Client", (string)null);
+                            b1.ToTable("Client");
 
                             b1.WithOwner()
                                 .HasForeignKey("ClientId");
