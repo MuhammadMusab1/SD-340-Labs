@@ -9,12 +9,12 @@ namespace DataAnnotationLab.Models
         public int Id { get; set; }
         public int Capacity { get; set; }
         public Section Section { get; set; }
-        public int CurrentClientId { get; set; }
+        public int? CurrentClientId { get; set; }
         [ForeignKey("CurrentRoomId")]
-        public Client CurrentClient { get; set; }
-        public int PreviousClientId { get; set; }
+        public Client? CurrentClient { get; set; }
+        public int? PreviousClientId { get; set; }
         [ForeignKey("PreviousRoomId")]
-        public Client PreviousClient { get; set; }
+        public Client? PreviousClient { get; set; }
 
 
         public Room()

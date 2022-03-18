@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAnnotationLab.Migrations
 {
     [DbContext(typeof(DataAnnotationLabContext))]
-    [Migration("20220318052401_AddMultipleOneToOneRelationshipBetweenClientAndUser")]
+    [Migration("20220318053647_AddMultipleOneToOneRelationshipBetweenClientAndUser")]
     partial class AddMultipleOneToOneRelationshipBetweenClientAndUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,16 +68,16 @@ namespace DataAnnotationLab.Migrations
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
 
-                    b.Property<int>("CurrentClientId")
+                    b.Property<int?>("CurrentClientId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CurrentRoomId")
+                    b.Property<int?>("CurrentRoomId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PreviousClientId")
+                    b.Property<int?>("PreviousClientId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PreviousRoomId")
+                    b.Property<int?>("PreviousRoomId")
                         .HasColumnType("int");
 
                     b.Property<int>("Section")
@@ -86,10 +86,12 @@ namespace DataAnnotationLab.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CurrentRoomId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[CurrentRoomId] IS NOT NULL");
 
                     b.HasIndex("PreviousRoomId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[PreviousRoomId] IS NOT NULL");
 
                     b.ToTable("Room");
                 });
@@ -128,15 +130,11 @@ namespace DataAnnotationLab.Migrations
                 {
                     b.HasOne("DataAnnotationLab.Models.Client", "CurrentClient")
                         .WithOne("CurrentRoom")
-                        .HasForeignKey("DataAnnotationLab.Models.Room", "CurrentRoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DataAnnotationLab.Models.Room", "CurrentRoomId");
 
                     b.HasOne("DataAnnotationLab.Models.Client", "PreviousClient")
                         .WithOne("PreviousRoom")
-                        .HasForeignKey("DataAnnotationLab.Models.Room", "PreviousRoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DataAnnotationLab.Models.Room", "PreviousRoomId");
 
                     b.Navigation("CurrentClient");
 

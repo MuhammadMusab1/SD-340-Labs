@@ -12,29 +12,25 @@ namespace DataAnnotationLab.Migrations
                 name: "CurrentClientId",
                 table: "Room",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "CurrentRoomId",
                 table: "Room",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "PreviousClientId",
                 table: "Room",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "PreviousRoomId",
                 table: "Room",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "CurrentRoomId",
@@ -54,29 +50,29 @@ namespace DataAnnotationLab.Migrations
                 name: "IX_Room_CurrentRoomId",
                 table: "Room",
                 column: "CurrentRoomId",
-                unique: true);
+                unique: true,
+                filter: "[CurrentRoomId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Room_PreviousRoomId",
                 table: "Room",
                 column: "PreviousRoomId",
-                unique: true);
+                unique: true,
+                filter: "[PreviousRoomId] IS NOT NULL");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Room_Client_CurrentRoomId",
                 table: "Room",
                 column: "CurrentRoomId",
                 principalTable: "Client",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Room_Client_PreviousRoomId",
                 table: "Room",
                 column: "PreviousRoomId",
                 principalTable: "Client",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
