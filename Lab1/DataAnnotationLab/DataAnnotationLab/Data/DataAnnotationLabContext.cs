@@ -14,7 +14,30 @@ namespace DataAnnotationLab.Data
             : base(options)
         {
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            //builder.Entity<Client>().HasKey(client => client.Id);
+            //builder.Entity<Room>().HasKey(room => room.Id);
 
+            //builder.Entity<Room>()
+            //    .HasOne(room => room.CurrentClient)
+            //    .WithOne(client => client.CurrentRoom)
+            //    .HasForeignKey<Room>(room => room.CurrentClientId);
+            //builder.Entity<Room>()
+            //    .HasOne(room => room.PreviousClient)
+            //    .WithOne(client => client.PreviousRoom)
+            //    .HasForeignKey<Room>(room => room.PreviousClientId);
+
+            //builder.Entity<Client>()
+            //    .HasOne(client => client.CurrentRoom)
+            //    .WithOne(room => room.CurrentClient)
+            //    .HasForeignKey<Client>(client => client.CurrentRoomId);
+            //builder.Entity<Client>()
+            //    .HasOne(client => client.PreviousRoom)
+            //    .WithOne(room => room.PreviousClient)
+            //    .HasForeignKey<Client>(client => client.PreviousRoomId);
+
+        }
         public DbSet<Client> Client { get; set; }
         public DbSet<Room> Room { get; set; }
     }

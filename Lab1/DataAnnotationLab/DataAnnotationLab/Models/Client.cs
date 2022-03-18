@@ -19,12 +19,12 @@ namespace DataAnnotationLab.Models
         [Required]
         public string PhoneNumber { get; set; }
         public Credit Credit { get; set; }
-        public int? CurrentRoomId { get; set; }
+        public int CurrentRoomId { get; set; } // foregin key
         [InverseProperty("CurrentClient")]
-        public Room? CurrentRoom { get; set; }
-        public int? PreviousRoomId { get; set; }
+        public Room CurrentRoom { get; set; }
+        public int PreviousRoomId { get; set; }// foregin key
         [InverseProperty("PreviousClient")]
-        public Room? PreviousRoom { get; set; }
+        public Room PreviousRoom { get; set; }
 
         public Client()
         {
