@@ -8,10 +8,10 @@ namespace MusicSaleConsoleApp.Models
 {
     internal class Customer : User
     {
-        public ICollection<CustomerSong> CustomerSongs { get; set; }
-        public Customer()
+        public ICollection<CustomeriMedia> CustomerMedias { get; set; }
+        public Customer(string name, int id) : base(name, id)
         {
-            CustomerSongs = new HashSet<CustomerSong>();
+            CustomerMedias = new HashSet<CustomeriMedia>();
         }
     }
 }

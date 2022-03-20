@@ -37,4 +37,21 @@ One [Song] can have only one [Artist]
 Many To Many
 One [User] can have many [Song]s
 One [Song] can be bought by many [User]s
+
+PART 2
+Expand our system to allow for the use of different media types.
+Create the interface, iMedia, with the properties Title, Runtime(How long the song is), and the method Play. 
+
+Modify the Collection property of User to collect iMedia objects rather than Songs.
+
+Implement iMedia as Song and Video classes.
+
+When a Song invokes Play() it should log 
+“Playing the song [Title] on your favourite music platform for [Runtime].” 
+
+When a Video invokes Play() it should log 
+“Watching [Title] on your inadequate viewing screen for [Runtime].” 
+
+Provide User a method, Binge, which invokes Play() on each object in their Collection. 
+This requires no logic beyond looping through every iMedia object and invoking iMedia.Play();
  */

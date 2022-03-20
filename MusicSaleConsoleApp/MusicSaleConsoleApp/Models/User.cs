@@ -12,11 +12,31 @@ namespace MusicSaleConsoleApp.Models
     {
         public int Id { get; set; } 
         public string Name { get; set; }
-        public ICollection<Song> Songs { get; set; }
-        public string Email { get; set; }
+        public ICollection<iMedia> Medias { get; set; }
+        public string? Email { get; set; }
         public virtual void GenerateEmail()
         {
             Email = $"{Name}{Id}@gmail.com"; // e.g "Musab3@gmail.com"
+        }
+        public void Binge()
+        {
+            if(Medias.Any())
+            {
+                foreach(iMedia imedia in Medias)
+                {
+                    imedia.Play();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Media is empty");
+            }
+        }
+        public User(string name, int id)
+        {
+            Name = name;
+            Id = id;
+            Medias = new HashSet<iMedia>();
         }
     }
 }

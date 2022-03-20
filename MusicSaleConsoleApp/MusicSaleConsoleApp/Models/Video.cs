@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace MusicSaleConsoleApp.Models
 {
-    internal class Song : iMedia
+    internal class Video : iMedia
     {
+        public Video(Artist artist, string title, float runtime, int id) : base(artist, title, runtime, id) { }
+
         public override void Play() //overriding the Play() method on the base class iMedia
         {
-            Console.WriteLine($"Playing the song {Title} on your favourite music platform for {Runtime}.");
+            Console.WriteLine($"Watching {Title} on your inadequate viewing screen for {Runtime}.");
         }
-        public Song(Artist artist, string title, float runtime, int id) : base(artist, title, runtime, id) { } //inherits base's constructor
     }
 }
