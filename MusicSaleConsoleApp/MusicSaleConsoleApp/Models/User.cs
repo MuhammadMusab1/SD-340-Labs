@@ -16,7 +16,7 @@ namespace MusicSaleConsoleApp.Models
         public string Email { get; set; }
         public virtual void GenerateEmail()
         {
-            Email = $"{Name}{Id}@gmail.com";
+            Email = $"{Name}{Id}@gmail.com"; // e.g "Musab3@gmail.com"
         }
     }
 }
