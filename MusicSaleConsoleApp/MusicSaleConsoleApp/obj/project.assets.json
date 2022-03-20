@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Muhammad Musab\\Desktop\\MusicSaleConsoleApp\\MusicSaleConsoleApp\\MusicSaleConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\Muhammad Musab\\Desktop\\SD-340-Labs\\MusicSaleConsoleApp\\MusicSaleConsoleApp\\MusicSaleConsoleApp.csproj",
       "projectName": "MusicSaleConsoleApp",
-      "projectPath": "C:\\Users\\Muhammad Musab\\Desktop\\MusicSaleConsoleApp\\MusicSaleConsoleApp\\MusicSaleConsoleApp.csproj",
+      "projectPath": "C:\\Users\\Muhammad Musab\\Desktop\\SD-340-Labs\\MusicSaleConsoleApp\\MusicSaleConsoleApp\\MusicSaleConsoleApp.csproj",
       "packagesPath": "C:\\Users\\Muhammad Musab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Muhammad Musab\\Desktop\\MusicSaleConsoleApp\\MusicSaleConsoleApp\\obj\\",
+      "outputPath": "C:\\Users\\Muhammad Musab\\Desktop\\SD-340-Labs\\MusicSaleConsoleApp\\MusicSaleConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Muhammad Musab\\AppData\\Roaming\\NuGet\\NuGet.Config",
