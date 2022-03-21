@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e090000b-dbcd-4e6e-8fa3-461a83caf564": {
+      "ProjectGuid": "e090000b-dbcd-4e6e-8fa3-461a83caf564",
+      "DisplayName": "Parser",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
