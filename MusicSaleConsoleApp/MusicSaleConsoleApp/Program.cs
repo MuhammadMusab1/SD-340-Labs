@@ -1,6 +1,29 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using MusicSaleConsoleApp.Models;
+
+//Testing 
+
+Artist artist1 = new Artist("Eisha", 3);
+Customer customer1 = new Customer("Musab", 57);
+
+Song songByEisha = new Song(artist1, "Song for Cap", 2, 1);
+Video videoByEisha = new Video(artist1, "I went to the Zoo", 5, 2);
+
+artist1.Medias.Add(songByEisha); // Song can be added because it is a child of the iMedia
+artist1.Medias.Add(videoByEisha); // Video can be added because it also is a child of the iMedia
+
+artist1.GenerateEmail();
+customer1.GenerateEmail();
+
+Console.WriteLine(artist1.Email);
+Console.WriteLine(customer1.Email);
+
+artist1.Binge();
+customer1.Binge();
+
 Console.ReadLine();
+
+
 
 
 /*

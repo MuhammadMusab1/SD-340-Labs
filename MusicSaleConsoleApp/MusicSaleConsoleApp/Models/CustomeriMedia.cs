@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicSaleConsoleApp.Models
 {
-    internal class CustomeriMedia
+    internal class CustomeriMedia //break class between Customer and iMedia (Many To Many)
     {
         public int Id { get; set; }
         public int MediaId { get; set;}

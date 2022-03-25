@@ -12,7 +12,7 @@ namespace MusicSaleConsoleApp.Models
 
         public override void Play() //overriding the Play() method on the base class iMedia
         {
-            Console.WriteLine($"Watching {Title} on your inadequate viewing screen for {Runtime}.");
+            Console.WriteLine($"Watching {Title} on your inadequate viewing screen for {Runtime} minutes.");
         }
     }
 }
