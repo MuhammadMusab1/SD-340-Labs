@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicSaleConsoleApp.Models
 {
-    internal class iMedia
+    internal interface iMedia // interface
     {
         public int ArtistId { get; set; }
         public Artist Artist { get; set; }
@@ -15,18 +15,10 @@ namespace MusicSaleConsoleApp.Models
         public string Title { get; set; }
         public float Runtime { get; set; }
         public ICollection<CustomeriMedia> CustomerMedias { get; set; }
-        public virtual void Play()
+        void Play()
         {
-            Console.WriteLine($"Playing {Title} for {Runtime}");
+            //no body for the method in interface
         }
-        public iMedia(Artist artist, string title, float runtime, int id)
-        {
-            Id = id;
-            ArtistId = artist.Id;
-            Artist = artist;
-            Title = title;
-            Runtime = runtime;
-            CustomerMedias = new HashSet<CustomeriMedia>();
-        }
+        //interface cannot have a constructor
     }
 }
